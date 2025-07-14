@@ -90,5 +90,11 @@ footer {
   header h1 {
     font-size: 1.6em;
   }
+
+  img {
+  max-width: 100%;
+  height: auto;
+}
+
 }
 
