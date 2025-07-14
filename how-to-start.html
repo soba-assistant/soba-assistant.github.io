@@ -2,43 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SOBA Assistant - How to Start</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Start | SOBA Assistant</title>
+  <link rel="stylesheet" href="../styles.css"/>
 </head>
 <body>
   <header>
     <h1>SOBA Assistant</h1>
     <nav>
-      <a href="home/">Home</a>
-      <a href="tutorial.html">Tutorial</a>
-      <a href="how-to-start.html" class="active">How to Start</a>
-      <a href="plugins.html">Plugins</a>
-      <a href="update-site.html">Update Site</a>
-      <a href="publications.html">Publications</a>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../tutorial/index.html">Tutorial</a></li>
+        <li><a class="active" href="how-to-start.html">How to Start</a></li>
+        <li><a href="../plugins/index.html">Plugins</a></li>
+        <li><a href="../updatesite/index.html">Update Site</a></li>
+        <li><a href="../publications/index.html">Publications</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <h2>How to Start with SOBA</h2>
+    <h2>📘 How to Start with SOBA Assistant</h2>
+    <p>SOBA Assistant is an intelligent modelling plugin designed to enhance your Eclipse modelling experience with the power of AI. Here's how to get started:</p>
 
-    <h3>🔧 Requirements</h3>
+    <h3>🔧 Step 1: Create a New EMF Project</h3>
+    <p>Open Eclipse and go to: <code>File > New > Project...</code><br/>
+    Select <strong>Eclipse Modeling Framework > EMF Project</strong>.</p>
+    <p>Name your project (e.g., <code>HotelModel</code>) and proceed with the default settings.</p>
+
+    <h3>📥 Step 2: Import Your Metamodel</h3>
+    <p>During setup, you will be asked to provide an <code>.ecore</code> file. This defines the structure of your modelling language.</p>
     <ul>
-      <li>Java & Eclipse IDE installed</li>
-      <li>Internet connection</li>
-      <li>OpenAI API Key</li>
+      <li>Browse to the <code>.ecore</code> file (e.g., <code>Hotel.ecore</code>)</li>
+      <li>A <code>.genmodel</code> will be generated automatically</li>
+      <li>Confirm the root package selection</li>
     </ul>
 
-    <h3>📥 Installation</h3>
-    <ol>
-      <li>Clone the repository:
-        <pre><code>git clone https://github.com/yourusername/llm-recommendation.git</code></pre>
+    <h3>🧠 Step 3: Enable SOBA Nature</h3>
+    <p>Right-click the project > <strong>Properties</strong> > <strong>Project Natures</strong>.</p>
+    <p>Add <strong>Soba Project Nature</strong> to enable SOBA features:</p>
+    <ul>
+      <li>Chat folder to store conversations</li>
+      <li>Settings folder with default configurations</li>
+      <li>Switches to the SOBA perspective with:
+        <ul>
+          <li>🗨️ Chat View</li>
+          <li>🌳 Results View</li>
+        </ul>
       </li>
-      <li>Open in Eclipse as a Plugin Project</li>
-      <li>Ensure all `.jar` files in `lib/` are on the build path</li>
-      <li>Add your OpenAI API key in `resources/keys.properties`:
-        <pre><code>openai.api.key=YOUR_KEY_HERE</code></pre>
-      </li>
-    </ol>
+    </ul>
+
+    <h3>✨ Step 4: Start Using SOBA Assistant</h3>
+    <p>Type natural language commands in the chat, for example:</p>
+    <code>create 10 rooms with numbers from 102, 5 single price 100 and 5 double price 180</code>
+    <p>The assistant will analyze your model and show recommendations in the Results View. You can drag and drop them directly into your <code>.xmi</code> file.</p>
+
+    <h3>🔁 Multi-Project Support</h3>
+    <p>SOBA supports multiple models and sessions. Each chat tab can be tied to a specific project or context.</p>
   </main>
 
   <footer>
