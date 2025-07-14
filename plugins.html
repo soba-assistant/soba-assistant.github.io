@@ -9,7 +9,7 @@
   <header>
     <h1>SOBA Assistant</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="home/">Home</a>
       <a href="tutorial.html">Tutorial</a>
       <a href="how-to-start.html">How to Start</a>
       <a href="plugins.html" class="active">Plugins</a>
@@ -19,8 +19,27 @@
   </header>
 
   <main>
-    <h2>Plugins</h2>
-    <p>Plugin documentation and examples are coming soon.</p>
+    <h2>What is the SOBA Plugin?</h2>
+    <p>Power your Eclipse modeling environment with intelligent assistance, thanks to the <strong>SOBA Plugin</strong>, an AI-driven tool that integrates Large Language Models like GPT. Create, edit, and refine models such as UML, BPMN, XMI, and Ecore using natural language queries and chat-based interaction inside your IDE.</p>
+
+    <h3>How it Works</h3>
+    <ol>
+      <li><strong>Context Analysis:</strong> Understands the active model, its metamodel, and serialization settings</li>
+      <li><strong>Prompt Building:</strong> Dynamically generates prompts for GPT based on the modeling context</li>
+      <li><strong>LLM Query:</strong> Sends prompt to GPT (OpenAI)</li>
+      <li><strong>Response Handling:</strong> Parses structured JSON recommendations</li>
+      <li><strong>User Interface:</strong> Chat + Tree view inside Eclipse for applying changes</li>
+    </ol>
+
+    <h3>Supported Modeling Types</h3>
+    <ul>
+      <li>XMI</li>
+      <li>BPMN</li>
+      <li>UML</li>
+      <li>Ecore</li>
+    </ul>
+
+    <p>Support for more types is possible via an <strong>extension point system</strong>.</p>
   </main>
 
   <footer>
