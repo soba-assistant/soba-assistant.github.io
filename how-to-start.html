@@ -1,68 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>How to Start | SOBA Assistant</title>
-  <link rel="stylesheet" href="../styles.css"/>
+  <meta charset="UTF-8">
+  <title>How to Start - SOBA Assistant</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+
   <header>
     <h1>SOBA Assistant</h1>
     <nav>
       <ul>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="../tutorial/index.html">Tutorial</a></li>
+        <li><a href="../tutorial/tutorial.html">Tutorial</a></li>
         <li><a class="active" href="how-to-start.html">How to Start</a></li>
-        <li><a href="../plugins/index.html">Plugins</a></li>
-        <li><a href="../updatesite/index.html">Update Site</a></li>
-        <li><a href="../publications/index.html">Publications</a></li>
+        <li><a href="../plugins/plugins.html">Plugins</a></li>
+        <li><a href="../update-site/update-site.html">Update Site</a></li>
+        <li><a href="../publications/publications.html">Publications</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>📘 How to Start with SOBA Assistant</h2>
-    <p>SOBA Assistant is an intelligent modelling plugin designed to enhance your Eclipse modelling experience with the power of AI. Here's how to get started:</p>
+    <h2>Getting Started with SOBA Assistant</h2>
 
-    <h3>🔧 Step 1: Create a New EMF Project</h3>
-    <p>Open Eclipse and go to: <code>File > New > Project...</code><br/>
-    Select <strong>Eclipse Modeling Framework > EMF Project</strong>.</p>
-    <p>Name your project (e.g., <code>HotelModel</code>) and proceed with the default settings.</p>
+    <p>SOBA Assistant is a modelling helper plugin integrated into the Eclipse IDE. Follow these steps to begin using it with your EMF (Eclipse Modeling Framework) projects.</p>
 
-    <h3>📥 Step 2: Import Your Metamodel</h3>
-    <p>During setup, you will be asked to provide an <code>.ecore</code> file. This defines the structure of your modelling language.</p>
+    <h3>🧩 Step 1: Create an EMF Project</h3>
+    <ol>
+      <li>In Eclipse, go to <strong>File > New > Project...</strong></li>
+      <li>Select <strong>EMF Project</strong> under <em>Eclipse Modeling Framework</em></li>
+      <li>Name your project (e.g., <code>HotelModel</code>) and click <strong>Next</strong></li>
+      <li>Load your metamodel (e.g., a <code>.ecore</code> file)</li>
+      <li>Click <strong>Finish</strong></li>
+    </ol>
+    <img src="../images/emf-create.png" alt="Create EMF Project" width="500">
+
+    <h3>⚙️ Step 2: Enable SOBA Support</h3>
+    <ol>
+      <li>Right-click the project > <strong>Properties</strong></li>
+      <li>Navigate to <strong>Project Natures</strong></li>
+      <li>Add <strong>SOBA Project Nature</strong> to the list</li>
+      <li>This activates the SOBA interface (chat view + result view)</li>
+    </ol>
+    <img src="../images/add-soba-nature.png" alt="Add SOBA Nature" width="500">
+
+    <h3>🧠 Step 3: Use the Assistant</h3>
+    <p>Now that the project has SOBA enabled:</p>
     <ul>
-      <li>Browse to the <code>.ecore</code> file (e.g., <code>Hotel.ecore</code>)</li>
-      <li>A <code>.genmodel</code> will be generated automatically</li>
-      <li>Confirm the root package selection</li>
+      <li>A <code>settings/</code> folder is created for assistant configuration</li>
+      <li>A <code>chats/</code> folder stores assistant conversations</li>
+      <li>The right pane shows the <strong>SOBA Chat View</strong></li>
+      <li>The bottom pane includes the <strong>SOBA Results View</strong></li>
     </ul>
+    <img src="../images/soba-chat-ready.png" alt="SOBA Interface Active" width="700">
 
-    <h3>🧠 Step 3: Enable SOBA Nature</h3>
-    <p>Right-click the project > <strong>Properties</strong> > <strong>Project Natures</strong>.</p>
-    <p>Add <strong>Soba Project Nature</strong> to enable SOBA features:</p>
+    <h3>💬 Step 4: Ask for Recommendations</h3>
+    <p>Once the metamodel and model (e.g., XMI) are loaded:</p>
     <ul>
-      <li>Chat folder to store conversations</li>
-      <li>Settings folder with default configurations</li>
-      <li>Switches to the SOBA perspective with:
-        <ul>
-          <li>🗨️ Chat View</li>
-          <li>🌳 Results View</li>
-        </ul>
-      </li>
+      <li>SOBA reads the active model and metamodel</li>
+      <li>Start typing in the chat to receive intelligent suggestions</li>
+      <li>Responses are shown in the results view</li>
+      <li>You can <strong>drag & drop</strong> suggestions into your model</li>
     </ul>
+    <img src="../images/soba-recommendations.png" alt="Soba Chat and Results" width="700">
 
-    <h3>✨ Step 4: Start Using SOBA Assistant</h3>
-    <p>Type natural language commands in the chat, for example:</p>
-    <code>create 10 rooms with numbers from 102, 5 single price 100 and 5 double price 180</code>
-    <p>The assistant will analyze your model and show recommendations in the Results View. You can drag and drop them directly into your <code>.xmi</code> file.</p>
+    <p>You can run multiple sessions across models and projects, and each session is stored for continuity.</p>
 
-    <h3>🔁 Multi-Project Support</h3>
-    <p>SOBA supports multiple models and sessions. Each chat tab can be tied to a specific project or context.</p>
   </main>
 
   <footer>
-    <p>© 2025 SOBA Project</p>
+    <p>&copy; 2025 SOBA Project</p>
   </footer>
+
 </body>
 </html>
