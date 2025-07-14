@@ -3,76 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <title>SOBA Assistant - How to Start</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <h1>SOBA Assistant</h1>
     <nav>
-      <a href="../home/">Home</a>
-      <a href="../tutorial.html">Tutorial</a>
-      <a href="../how-to-start.html" class="active">How to Start</a>
-      <a href="../plugins.html">Plugins</a>
-      <a href="../update-site.html">Update Site</a>
-      <a href="../publications.html">Publications</a>
+      <a href="home/">Home</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="how-to-start.html" class="active">How to Start</a>
+      <a href="plugins.html">Plugins</a>
+      <a href="update-site.html">Update Site</a>
+      <a href="publications.html">Publications</a>
     </nav>
   </header>
 
   <main>
     <h2>Getting Started with SOBA Assistant</h2>
-    <p>SOBA Assistant is a modelling helper plugin integrated into the Eclipse IDE. Follow these steps to begin using it with your EMF (Eclipse Modeling Framework) projects:</p>
+    <p>
+      SOBA Assistant is an Eclipse plugin that helps you model more effectively using the Eclipse Modelling Framework (EMF) combined with AI-powered support. Follow these steps to get started:
+    </p>
 
-    <h3>🟢 Step 1: Create an EMF Project</h3>
+    <h3>✅ Step 1: Create an EMF Project</h3>
     <ol>
-      <li>In Eclipse, go to <strong>File > New > Project...</strong></li>
+      <li>In Eclipse, go to <strong>File &gt; New &gt; Project...</strong></li>
       <li>Select <strong>EMF Project</strong> under <em>Eclipse Modeling Framework</em></li>
       <li>Name your project (e.g., <code>HotelModel</code>) and click <strong>Next</strong></li>
-      <li>Load your metamodel (e.g., a <code>.ecore</code> file)</li>
+      <li>Load your metamodel (.ecore file) and configure the generation model</li>
       <li>Click <strong>Finish</strong></li>
     </ol>
-    <img src="../images/emf-create.png" alt="Create EMF Project - Step 1" />
-    <img src="../images/emf-create2.png" alt="Name the EMF Project" />
-    <img src="../images/emf-create3.png" alt="Load the metamodel" />
-    <img src="../images/emf-create4.png" alt="Confirm Generator Model" />
-    <img src="../images/emf-create5.png" alt="Finish EMF Setup" />
+    <img src="images/emf-create.png" alt="Create EMF Project" />
+    <img src="images/emf-create2.png" alt="Enter Project Name" />
+    <img src="images/emf-create3.png" alt="Ecore Import" />
+    <img src="images/emf-create4.png" alt="Package Selection" />
+    <img src="images/emf-create5.png" alt="Finalizing EMF Project" />
 
-    <h3>🟣 Step 2: Enable SOBA Support</h3>
+    <h3>✅ Step 2: Enable SOBA Support</h3>
     <ol>
-      <li>Right-click the project > <strong>Properties</strong></li>
+      <li>Right-click your EMF project and select <strong>Properties</strong></li>
       <li>Go to <strong>Project Natures</strong></li>
-      <li>Add <strong>SOBA Project Nature</strong> to the list</li>
-      <li>This activates the SOBA interface (chat + result views)</li>
+      <li>Add <strong>SOBA Project Nature</strong> to enable the assistant</li>
     </ol>
-    <img src="../images/add-soba-nature.png" alt="Add SOBA Project Nature" />
+    <p>This will activate the <strong>SOBA Chat View</strong> and <strong>SOBA Results View</strong> in the IDE.</p>
+    <img src="images/add-soba-nature.png" alt="Add SOBA Nature" />
 
-    <h3>🗨️ Step 3: Use the Assistant</h3>
-    <p>Once SOBA is enabled:</p>
+    <h3>✅ Step 3: Use the Assistant</h3>
+    <p>Once SOBA is active, your project gains the following:</p>
     <ul>
-      <li>A <code>settings/</code> folder is created for assistant configuration</li>
-      <li>A <code>chats/</code> folder stores assistant conversations</li>
-      <li>The right pane shows the <strong>SOBA Chat View</strong></li>
-      <li>The bottom pane shows the <strong>SOBA Results View</strong></li>
+      <li>A <code>settings/</code> folder for configuration</li>
+      <li>A <code>chats/</code> folder to store assistant conversations</li>
+      <li>The right panel shows the <strong>SOBA Chat View</strong></li>
+      <li>The bottom panel displays the <strong>SOBA Results View</strong></li>
     </ul>
-    <img src="../images/soba-chat-ready.png" alt="SOBA Chat Ready" />
-    <img src="../images/soba-chat-ready2.png" alt="Chat View with model open" />
+    <img src="images/soba-chat-ready.png" alt="SOBA Chat Interface" />
+    <img src="images/soba-chat-ready2.png" alt="SOBA Chat Interface Expanded" />
 
     <h3>✨ Step 4: Ask for Recommendations</h3>
     <p>Type prompts like:</p>
-    <blockquote><code>create 10 rooms with numbers from 102, 5 single price 100 and 5 double price 180</code></blockquote>
+    <pre>
+create 10 rooms with numbers from 102, 5 single price 100 and 5 double price 180
+    </pre>
     <p>SOBA sends a structured query to the LLM, which considers:</p>
     <ul>
       <li>✔️ Your current model and metamodel</li>
       <li>✔️ Your serialization and type configuration</li>
-      <li>✔️ The selected model element (if any)</li>
-      <li>✔️ Previous chat history</li>
+      <li>✔️ The currently selected model element</li>
+      <li>✔️ The chat history for contextual memory</li>
     </ul>
-    <p>Results are shown in the <strong>Results View</strong> and are ready to apply.</p>
-    <img src="../images/soba-recommendations.png" alt="Chat with recommendation results" />
-    <img src="../images/soba-recommendations2.png" alt="Detailed recommendation structure" />
+    <img src="images/soba-recommendations.png" alt="Recommendation Input" />
+    <img src="images/soba-recommendations2.png" alt="Recommendation Results" />
 
     <h3>✅ Final Notes</h3>
-    <p>SOBA's architecture combines metamodel-driven validation with LLM-powered suggestions, enabling fast and precise modelling via natural language. It supports multiple modeling languages and encourages extensibility via plugin integration.</p>
-
+    <p>
+      SOBA's architecture combines metamodel-driven validation with LLM-powered suggestions, enabling fast and precise modelling via natural language. It supports multiple modeling languages and encourages extensibility via plugin integration.
+    </p>
   </main>
 
   <footer>
