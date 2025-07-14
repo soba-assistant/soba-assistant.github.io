@@ -20,29 +20,56 @@
 
   <main>
     <h2>SOBA Assistant Tutorial</h2>
+    <p>
+      This tutorial will guide you through the essential steps to use SOBA Assistant effectively inside Eclipse.
+      SOBA enhances modeling by combining Large Language Models with real-time analysis of your active project.
+    </p>
 
-    <ol>
-      <li>🛠️ <strong>Run the Plugin</strong>  
-        Launch Eclipse using a plugin configuration with `soba.plugin` auto-started.
-      </li>
-      <li>📁 <strong>Create an EMF Project</strong>  
-        Use Eclipse to create a new EMF modeling workspace.
-      </li>
-      <li>📂 <strong>Load the Metamodel</strong>  
-        Import a `.ecore` file to define model structure.
-      </li>
-      <li>🧱 <strong>Create a Model Instance</strong>  
-        Begin editing a model that conforms to your metamodel.
-      </li>
-      <li>🔧 <strong>Enable SOBA Nature</strong>  
-        Right-click the project → "Add SOBA Nature"  
-        This activates chat + model view.
-      </li>
-      <li>💬 <strong>Use the Assistant</strong>  
-        Type in the chat to ask GPT for model recommendations.  
-        View suggestions in the tree and apply them to your model!
-      </li>
-    </ol>
+    <h3>Understanding SOBA's Workflow</h3>
+    <ul>
+      <li>SOBA works with Eclipse EMF projects that use metamodels like <code>.ecore</code>.</li>
+      <li>It reads your current model (e.g. <code>.xmi</code>) and its corresponding metamodel.</li>
+      <li>The assistant creates prompts that include model context, configuration, and chat history.</li>
+      <li>GPT then generates intelligent suggestions or answers based on your query.</li>
+    </ul>
+
+    <h3>Using the Chat</h3>
+    <p>
+      After installing and activating SOBA Nature on your project, a chat view appears on the right side of the Eclipse interface.
+      Here, you can type natural language instructions to create, modify, or inspect model elements.
+    </p>
+    <p>
+      Example commands:
+    </p>
+    <ul>
+      <li><code>Add 3 single rooms with price 80</code></li>
+      <li><code>Create a guest with name John Doe and assign to room 204</code></li>
+      <li><code>Show me options for reservation status</code></li>
+    </ul>
+
+    <h3>Reviewing Suggestions</h3>
+    <p>
+      The results view shows model recommendations structured in a visual tree. These suggestions can be:
+    </p>
+    <ul>
+      <li>Inspected and edited before applying</li>
+      <li>Dragged into the model editor</li>
+      <li>Filtered according to the selected element in the model</li>
+    </ul>
+
+    <h3>Working Across Projects</h3>
+    <p>
+      SOBA supports multiple sessions and keeps track of the project and model you are working on. Each session:
+    </p>
+    <ul>
+      <li>Stores chat history and context</li>
+      <li>Can be reopened and resumed</li>
+      <li>Supports seamless switching between models</li>
+    </ul>
+
+    <p>
+      You can explore SOBA’s full power by combining it with your custom metamodels and using the extension system to integrate additional modeling languages.
+    </p>
   </main>
 
   <footer>
