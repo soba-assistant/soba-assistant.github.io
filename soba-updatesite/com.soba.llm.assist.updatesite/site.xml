@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.soba.llm.assist.feature_1.0.0.202507231243.jar" id="com.soba.llm.assist.feature" version="1.0.0.202507231243">
+      <category name="soba.tools"/>
+   </feature>
+   <category-def name="soba.tools" label="Soba tools"/>
+</site>

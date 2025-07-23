@@ -77,6 +77,45 @@ footer {
   margin-top: 40px;
 }
 
+/* tabla de SOBA */
+.update-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .update-table th,
+  .update-table td {
+    padding: 12px 20px;
+    text-align: left;
+  }
+
+  .update-table thead {
+    background-color: #4BC6B9;
+    color: white;
+  }
+
+  .update-table tbody tr {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+  }
+
+  .update-table tbody tr:hover {
+    background-color: #e6f7f5;
+  }
+
+  .update-table a {
+    color: #007B8A;
+    text-decoration: none;
+  }
+
+  .update-table a:hover {
+    text-decoration: underline;
+  }
+
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
